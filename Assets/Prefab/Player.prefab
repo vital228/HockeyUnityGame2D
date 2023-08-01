@@ -262,6 +262,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7397774709330685939}
   - component: {fileID: 4695360650922046053}
+  - component: {fileID: 6358625249162170636}
   m_Layer: 0
   m_Name: StickLeft
   m_TagString: Untagged
@@ -336,6 +337,58 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!60 &6358625249162170636
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2682279777124453217}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 2}
+    newSize: {x: 1, y: 2}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 0.3005009, y: -0.93328756}
+      - {x: 0.4935054, y: -0.7452313}
+      - {x: 0.48493886, y: -0.35042548}
+      - {x: -0.54792744, y: -0.2740233}
+      - {x: -0.53571236, y: -0.6654753}
+      - {x: -0.38528746, y: -0.9105035}
+      - {x: 0.0140070915, y: -1.0144327}
+  m_UseDelaunayMesh: 0
 --- !u!1 &5196505505239860587
 GameObject:
   m_ObjectHideFlags: 0
@@ -530,21 +583,21 @@ PolygonCollider2D:
   m_Points:
     m_Paths:
     - - {x: 0.15559319, y: 0.4743936}
-      - {x: -0.008852817, y: 0.5042207}
-      - {x: -0.16835855, y: 0.47085953}
-      - {x: -0.36012477, y: 0.36850035}
-      - {x: -0.48790875, y: 0.104896784}
-      - {x: -0.47407362, y: -0.16080868}
-      - {x: -0.6792164, y: -0.46528825}
-      - {x: -0.64494765, y: -0.47918046}
-      - {x: -0.40564427, y: -0.27033556}
-      - {x: -0.27650672, y: -0.4255154}
-      - {x: -0.048286382, y: -0.50021994}
-      - {x: 0.2696826, y: -0.43813837}
-      - {x: 0.4467026, y: -0.2484976}
-      - {x: 0.5121677, y: -0.024500966}
+      - {x: -0.008852817, y: 0.4901593}
+      - {x: -0.17187391, y: 0.4638288}
+      - {x: -0.36364016, y: 0.34740812}
+      - {x: -0.47736266, y: 0.104896784}
+      - {x: -0.4916505, y: 0.007929072}
+      - {x: -0.44017127, y: -0.15945107}
+      - {x: -0.40590245, y: -0.26825827}
+      - {x: -0.4021289, y: -0.25275868}
+      - {x: -0.23432228, y: -0.38684636}
+      - {x: -0.048286382, y: -0.4580355}
+      - {x: 0.25562108, y: -0.39595392}
+      - {x: 0.40100282, y: -0.25552836}
+      - {x: 0.49107552, y: -0.020985603}
       - {x: 0.4541196, y: 0.21774673}
-      - {x: 0.34902596, y: 0.3855226}
+      - {x: 0.33847988, y: 0.35739964}
   m_UseDelaunayMesh: 0
 --- !u!114 &4594588306306515341
 MonoBehaviour:
@@ -558,6 +611,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e842f97605c29942b0deb4063d3bbeb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Stick: {fileID: 2682279777124453217}
   speed: 1
   speedPick: 1
   power: 10

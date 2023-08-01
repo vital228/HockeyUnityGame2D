@@ -7,6 +7,9 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     [SerializeField]
+    protected GameObject Stick = null;
+
+    [SerializeField]
     protected float speed = 1f;
 
     [SerializeField]
@@ -42,7 +45,8 @@ public class Player : MonoBehaviour
     }
 
 
-    private void Swap(GameObject a, GameObject b) { 
+    private void Swap(GameObject a, GameObject b)
+    {
         var t = a.transform.position;
         a.transform.position = b.transform.position;
         b.transform.position = t;
@@ -68,7 +72,7 @@ public class Player : MonoBehaviour
             }
             else
             {
-                if (GetDistanceToPick(teammates[index])> GetDistanceToPick(teammates[i]))
+                if (GetDistanceToPick(teammates[index]) > GetDistanceToPick(teammates[i]))
                 {
                     index = i;
                 }
@@ -89,11 +93,12 @@ public class Player : MonoBehaviour
         HandleChange();
         HandleMovement();
         HandleShot();
+        HandleStickRotate();
     }
 
     private void HandleChange()
     {
-        if (pick == null && Input.GetKeyUp(KeyCode.Space))
+        if (pick == null && Input.GetKeyUp(KeyCode.Tab))
         {
             SwapTeammate();
         }
@@ -147,13 +152,13 @@ public class Player : MonoBehaviour
         if (pick != null)
         {
             pick.transform.position += moveDir * speed * Time.deltaTime;
-            if (Math.Abs(moveDir.x * speed * Time.deltaTime + pick.transform.position.x - transform.position.x)>Math.Abs(pick.transform.position.x - transform.position.x)
-                && Math.Abs(pick.transform.position.x - transform.position.x) >= 0.6f)
+            if (Math.Abs(moveDir.x * speed * Time.deltaTime + pick.transform.position.x - transform.position.x) > Math.Abs(pick.transform.position.x - transform.position.x)
+                && Math.Abs(pick.transform.position.x - transform.position.x) >= 0.5f)
             {
                 moveDir.x = 0;
             }
             if (Math.Abs(moveDir.y * speed * Time.deltaTime + pick.transform.position.y - transform.position.y) > Math.Abs(pick.transform.position.y - transform.position.y)
-                && Math.Abs(pick.transform.position.y - transform.position.y) >= 0.6f)
+                && Math.Abs(pick.transform.position.y - transform.position.y) >= 0.5f)
             {
                 moveDir.y = 0;
             }
@@ -161,6 +166,37 @@ public class Player : MonoBehaviour
         }
     }
 
+    private void HandleStickRotate()
+    {
+        float angle = 0f;
+        if (Input.GetKey(KeyCode.K))
+        {
+            angle += 1f;
+        }
+        if (Input.GetKey(KeyCode.L))
+        {
+            angle -= 1f;
+        }
+        RotateStick(angle * Time.deltaTime * 90);
+    }
+
+    protected void RotateStick(float angle)
+    {
+        if (Stick != null)
+        {
+            Vector3 center = transform.position;
+            //new Vector3(0, 0, 0);
+            //float x = Stick.transform.position.x, y = Stick.transform.position.y;
+            //Vector3 moveDir = new Vector3(x * (float)Math.Cos(angle) - y * (float)Math.Sin(angle), x * (float)Math.Sin(angle) + y * (float)Math.Cos(angle));
+            //Stick.transform.position += moveDir;
+            //Vector3 rotDir = new Vector3(0,0,angle);
+            //Quaternion q = new Quaternion(0,0,angle,0);
+            Vector3 axis = new Vector3(0, 0, 1).normalized;
+
+            Stick.transform.RotateAround(center, axis, angle);
+            //Stick.transform.rotation *= Quaternion.Euler(0, 0, angle);
+        }
+    }
 
     protected void OnCollisionEnter2D(Collision2D collision)
     {
