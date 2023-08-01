@@ -1,3 +1,4 @@
+using Assets.Scrips;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -16,27 +17,102 @@ public class Player : MonoBehaviour
 
     protected float moveX, moveY;
 
-    protected Pick pick = null;
+
+    public GameObject[] teammates;
+
+
+
+    public GameObject[] skins;
+
+    public Pick pick = null;
     // Start is called before the first frame update
     protected void Start()
     {
+
     }
 
     protected void Awake()
     {
+        teammates = new GameObject[Settings.countPlayersInTeam - 1];
+    }
+
+    public void AddTeammate(GameObject t, int index)
+    {
+        teammates[index] = t;
+    }
+
+
+    private void Swap(GameObject a, GameObject b) { 
+        var t = a.transform.position;
+        a.transform.position = b.transform.position;
+        b.transform.position = t;
+
+        var t1 = a.transform.rotation;
+        a.transform.rotation = b.transform.rotation;
+        b.transform.rotation = t1;
+    }
+
+    private float GetDistanceToPick(GameObject t)
+    {
+        return Vector3.Distance(t.transform.position, Pick.Instance.transform.position);
+    }
+
+    private void SwapTeammate()
+    {
+        int index = -1;
+        for (int i = 0; i < teammates.Length; i++)
+        {
+            if (index == -1)
+            {
+                index = i;
+            }
+            else
+            {
+                if (GetDistanceToPick(teammates[index])> GetDistanceToPick(teammates[i]))
+                {
+                    index = i;
+                }
+            }
+        }
+        if (index != -1)
+            Swap(gameObject, teammates[index]);
+    }
+    private void SwapTeammate(int index)
+    {
+        Swap(gameObject, teammates[index]);
     }
 
 
     // Update is called once per frame
     void Update()
     {
+        HandleChange();
         HandleMovement();
         HandleShot();
     }
 
+    private void HandleChange()
+    {
+        if (pick == null && Input.GetKeyUp(KeyCode.Space))
+        {
+            SwapTeammate();
+        }
+        if (pick == null)
+        {
+            for (int i = 0; i < teammates.Length; i++)
+            {
+                if (teammates[i].GetComponent<AI>().pick != null)
+                {
+                    SwapTeammate(i);
+                    return;
+                }
+            }
+        }
+    }
+
     private void HandleShot()
     {
-        if (Input.GetKey(KeyCode.Space) && pick != null)
+        if (Input.GetKeyUp(KeyCode.Space) && pick != null)
         {
             Vector3 moveDir = new Vector3(moveX, moveY).normalized;
             pick.father = null;

@@ -5,5 +5,9 @@ using UnityEngine;
 
 public class Game : MonoBehaviour
 {
-    
+    int goalH;
+    int goalA;
+    GameObject[] playerH;
+    GameObject[] playerA;
+
 }

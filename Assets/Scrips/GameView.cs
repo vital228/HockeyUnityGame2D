@@ -1,7 +1,12 @@
+using Assets.Scrips;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using UnityEngine.U2D;
+using UnityEngine.UI;
 
 public class GameView : MonoBehaviour
 {
@@ -10,87 +15,178 @@ public class GameView : MonoBehaviour
     [SerializeField]
     private GameObject aiObject;
 
+    [SerializeField]
+    private SpriteAtlas atlasForm;
+
+    [SerializeField]
+    private GameObject endGamePanel;
+
+    [SerializeField]
+    private Text endGameWhoWin;
+    [SerializeField]
+    private Text endGameScore;
+
+
+
 
     GameObject[] teamH, teamA;
 
-    public static Color homeColor, awayColor;
+    public static int homeColor = 0, awayColor = 1;
+
+    public Text textGoalH, textGoalA, period, timeText;
+
+    public Image logoHome, logoAway;
+
+
+    private int speedPerionInMinute = 1;
+
+    private const int periodMinute = 20;
+
+    private float countdown;
+
+    private int periodNow = 1;
+
+
+
+
+
 
 
 
     private void Awake()
     {
-        homeColor = Color.blue;
-        awayColor = Color.red;
     }
     // Start is called before the first frame update
     void Start()
     {
-
-        
-    }
-
-
-
-    public void NewGame()
-    {
-        CloseButton();
+        Pick.Instance.Goal += GoalTeam;
         StartGame();
     }
 
-    public void TrainAI()
+    void GoalTeam(int team)
     {
-
-    }
-
-    void CloseButton()
-    {
-        foreach (var ob in GetComponentsInChildren<Transform>())
+        if (team + periodNow % 2 == 1)
         {
-            if (ob.tag == "ButtonStart")
-            {
-                ob.gameObject.SetActive(false);
-            }
+            textGoalH.text = (Int32.Parse(textGoalH.text)+1).ToString();
         }
+        else
+        {
+            textGoalA.text = (Int32.Parse(textGoalA.text) + 1).ToString();
+        }
+        ResetPosition();
     }
+
+
 
     void StartGame()
     {
-        teamA = new GameObject[3];
-        teamH = new GameObject[3];
-        teamA[0] = Instantiate(aiObject);
-        teamA[1] = Instantiate(aiObject);
-        teamA[2] = Instantiate(aiObject);
-        teamA[0].transform.position = new Vector3(-6.8f, 0, -1);
-        teamA[1].transform.position = new Vector3(-10f, 2, -1);
-        teamA[2].transform.position = new Vector3(-10f, -2, -1);
+        speedPerionInMinute = Settings.speed;
+        homeColor = Settings.homeSkin;
+        awayColor = Settings.awaySkin;
+
+        teamA = new GameObject[Settings.countPlayersInTeam];
+        teamH = new GameObject[Settings.countPlayersInTeam];
+        for (int i = 0; i<Settings.countPlayersInTeam; i++){
+            teamA[i] = Instantiate(aiObject);
+            teamA[i].transform.position = Settings.startPositionAway[i];
+        }
         foreach (var ob in teamA)
         {
             ob.tag = "AwayPlayers";
+            var t = ob.transform.GetChild(2).GetChild(0);
+            t.GetComponent<SpriteRenderer>().sprite = atlasForm.GetSprite("HockeyTeamNHL_" + awayColor);
+
         }
-        teamH[0] = Instantiate(aiObject);
-        teamH[1] = Instantiate(playerObject);
-        teamH[2] = Instantiate(aiObject);
-        teamH[0].transform.position = new Vector3(-3.2f, 0, -1);
-        teamH[1].transform.position = new Vector3(0, 2, -1);
-        teamH[2].transform.position = new Vector3(0f, -2, -1);
+        teamH[0] = Instantiate(playerObject);
+        teamH[0].transform.position = Settings.startPositionHome[0];
+        for (int i = 1; i<Settings.countPlayersInTeam; i++)
+        {
+            teamH[i] = Instantiate(aiObject);
+            teamH[i].transform.position = Settings.startPositionHome[i];
+            teamH[0].GetComponent<Player>().AddTeammate(teamH[i], i - 1);
+        }
+
         foreach (var ob in teamH)
         {
             ob.tag = "HomePlayers";
-        }
-        foreach (var ob in GameObject.FindGameObjectsWithTag("AwayPlayers"))
-        {
-            ob.GetComponentInChildren<SpriteRenderer>().color = awayColor;
-        }
-        foreach (var ob in GameObject.FindGameObjectsWithTag("HomePlayers"))
-        {
-            ob.GetComponentInChildren<SpriteRenderer>().color = homeColor;
+            var t = ob.transform.GetChild(2).GetChild(0);
+            t.GetComponent<SpriteRenderer>().sprite = atlasForm.GetSprite("HockeyTeamNHL_" + homeColor);
         }
 
+
+        logoHome.sprite = atlasForm.GetSprite("HockeyTeamNHL_" + homeColor);
+        logoAway.sprite = atlasForm.GetSprite("HockeyTeamNHL_" + awayColor);
+
+        countdown = periodMinute * 60;
+        timeText.text = "20:00";
+        period.text = periodNow + " Период";
+    }
+
+    void UpdateTimeText()
+    {
+        int minute = Mathf.FloorToInt(countdown / 60f);
+        int second = Mathf.FloorToInt(countdown % 60);
+        timeText.text = minute + ":" + second;
+        period.text = periodNow + " Период";
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        if (periodNow <= 3)
+        {
+            countdown -= Time.deltaTime * periodMinute / speedPerionInMinute;
+            UpdateTimeText();
+            if (countdown <= 0)
+            {
+                periodNow++;
+                if (periodNow > 3)
+                {
+                    EndGame();
+                }
+                countdown = periodMinute * 60;
+                ResetPosition();
+            }
+        }
     }
+
+    void EndGame()
+    {
+        if (Int32.Parse(textGoalH.text) > Int32.Parse(textGoalA.text))
+        {
+            endGameWhoWin.text = "Победа!";
+        }
+        else
+        {
+            endGameWhoWin.text = "Ты проиграл(";
+        }
+        endGameScore.text = textGoalH.text + ":" + textGoalA.text;
+        endGamePanel.SetActive(true);
+    }
+
+    public void ReturnToMainScene()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
+    }
+    void ResetPosition()
+    {
+        if (periodNow % 2 == 0)
+        {
+            for (int i = 0; i < Settings.countPlayersInTeam; i++)
+            {
+                teamA[i].transform.position = Settings.startPositionHome[i];
+                teamH[i].transform.position = Settings.startPositionAway[i];
+            }
+        }
+        else
+        {
+            for (int i = 0; i < Settings.countPlayersInTeam; i++)
+            {
+                teamA[i].transform.position = Settings.startPositionAway[i];
+                teamH[i].transform.position = Settings.startPositionHome[i];
+            }
+        }
+        Pick.Instance.Reset();
+    }
+
 }

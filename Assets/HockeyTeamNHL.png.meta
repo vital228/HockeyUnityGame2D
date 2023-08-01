@@ -1,0 +1,936 @@
+fileFormatVersion: 2
+guid: 858510dd4c9bffc408aefb141dcc1dc1
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: tvOS
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: HockeyTeamNHL_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 828
+        width: 195
+        height: 196
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 920fa3bbef53fe84ebb1d9ba11b04cb0
+      internalID: -34295156
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HockeyTeamNHL_1
+      rect:
+        serializedVersion: 2
+        x: 195
+        y: 834
+        width: 195
+        height: 190
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a3fb4d1dceff7f459598a5edebd2649
+      internalID: 689958013
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HockeyTeamNHL_2
+      rect:
+        serializedVersion: 2
+        x: 390
+        y: 834
+        width: 195
+        height: 190
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 20ecba6ecbbd0684bbd2c21179c6d481
+      internalID: -127662906
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HockeyTeamNHL_3
+      rect:
+        serializedVersion: 2
+        x: 585
+        y: 834
+        width: 195
+        height: 190
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c0ef08857e77a524cb048147049068e3
+      internalID: 1079138535
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HockeyTeamNHL_4
+      rect:
+        serializedVersion: 2
+        x: 780
+        y: 834
+        width: 195
+        height: 190
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c80f1c8d02fbb844bb54ec0b1583989f
+      internalID: -1158719078
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HockeyTeamNHL_5
+      rect:
+        serializedVersion: 2
+        x: 975
+        y: 834
+        width: 195
+        height: 190
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6817ba9b3624f0b4db2d78d9126f9181
+      internalID: -655033275
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HockeyTeamNHL_6
+      rect:
+        serializedVersion: 2
+        x: 1170
+        y: 834
+        width: 195
+        height: 190
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc930843dc472e2408c693d2b5c4c6ea
+      internalID: -726321015
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HockeyTeamNHL_7
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 638
+        width: 195
+        height: 190
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 03aba50d04adf6242b60a42da781f4cb
+      internalID: -1930261856
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HockeyTeamNHL_8
+      rect:
+        serializedVersion: 2
+        x: 195
+        y: 638
+        width: 195
+        height: 190
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 2}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b9055d9b5651fb9489bab0bd6eb0d5c3
+      internalID: -274826620
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HockeyTeamNHL_9
+      rect:
+        serializedVersion: 2
+        x: 390
+        y: 638
+        width: 195
+        height: 190
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 5}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea50f30e9292564439e7d02d3945347a
+      internalID: 108914675
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HockeyTeamNHL_10
+      rect:
+        serializedVersion: 2
+        x: 585
+        y: 638
+        width: 195
+        height: 190
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 7}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b1ebf3e9cc13b04f8a07b9ec8766024
+      internalID: -2099431998
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HockeyTeamNHL_11
+      rect:
+        serializedVersion: 2
+        x: 780
+        y: 638
+        width: 195
+        height: 190
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be3fb5fba694b6f46863852b71833733
+      internalID: 650549516
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HockeyTeamNHL_12
+      rect:
+        serializedVersion: 2
+        x: 975
+        y: 638
+        width: 195
+        height: 190
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd5c256fb4dc52640a1250fed64d178e
+      internalID: -519691179
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HockeyTeamNHL_13
+      rect:
+        serializedVersion: 2
+        x: 1170
+        y: 638
+        width: 195
+        height: 190
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: edd13f8eaf70b05409e7dce9f636a4df
+      internalID: -972882685
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HockeyTeamNHL_14
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 442
+        width: 195
+        height: 190
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9cc3913042a646246b9e074be2df5968
+      internalID: -281776959
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HockeyTeamNHL_15
+      rect:
+        serializedVersion: 2
+        x: 195
+        y: 442
+        width: 195
+        height: 190
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1af5ce51755e27e49a414f260370d246
+      internalID: 946291439
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HockeyTeamNHL_16
+      rect:
+        serializedVersion: 2
+        x: 390
+        y: 442
+        width: 195
+        height: 190
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 265839f4f12cfa143838256b2ace602b
+      internalID: -1763748456
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HockeyTeamNHL_17
+      rect:
+        serializedVersion: 2
+        x: 585
+        y: 442
+        width: 195
+        height: 190
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 80303d6709e1a124a93bd84083bb32ab
+      internalID: -1851027934
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HockeyTeamNHL_18
+      rect:
+        serializedVersion: 2
+        x: 780
+        y: 442
+        width: 195
+        height: 190
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b5f77a7ee5d48447aa1466bf4fed77e
+      internalID: 814609503
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HockeyTeamNHL_19
+      rect:
+        serializedVersion: 2
+        x: 975
+        y: 442
+        width: 195
+        height: 190
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 32d76d68659652f4bbf01929a4881a93
+      internalID: -1681590300
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HockeyTeamNHL_20
+      rect:
+        serializedVersion: 2
+        x: 1170
+        y: 442
+        width: 195
+        height: 190
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f6840b74a96714428398a28bf4f6a0d
+      internalID: 1821606988
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HockeyTeamNHL_21
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 246
+        width: 195
+        height: 190
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e60750690a788024eb3db24288f97582
+      internalID: -1628877688
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HockeyTeamNHL_22
+      rect:
+        serializedVersion: 2
+        x: 195
+        y: 246
+        width: 195
+        height: 190
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dead65366e8edf14baee9043a3337ba9
+      internalID: 2132657874
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HockeyTeamNHL_23
+      rect:
+        serializedVersion: 2
+        x: 390
+        y: 246
+        width: 195
+        height: 190
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf11e7a8d66647d4cab95cb1b1d50601
+      internalID: -337972330
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HockeyTeamNHL_24
+      rect:
+        serializedVersion: 2
+        x: 585
+        y: 246
+        width: 195
+        height: 190
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd9c428e57f5d8c4a92654535145e9d5
+      internalID: 2075660166
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HockeyTeamNHL_25
+      rect:
+        serializedVersion: 2
+        x: 780
+        y: 246
+        width: 195
+        height: 190
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c98ecd08c5ab7b243a6b61dc0a833b39
+      internalID: -2061028073
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HockeyTeamNHL_26
+      rect:
+        serializedVersion: 2
+        x: 975
+        y: 246
+        width: 195
+        height: 190
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df4c2fbed873e50489039611896a11b5
+      internalID: -785961164
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HockeyTeamNHL_27
+      rect:
+        serializedVersion: 2
+        x: 1170
+        y: 246
+        width: 195
+        height: 190
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 322a4497715766b4f88f35d52bf3c73a
+      internalID: -1737209823
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HockeyTeamNHL_28
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 50
+        width: 195
+        height: 190
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 06ff9c4f8e2acae4e91da64543855243
+      internalID: 33411402
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HockeyTeamNHL_29
+      rect:
+        serializedVersion: 2
+        x: 195
+        y: 50
+        width: 195
+        height: 190
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f0c2cfd44d3f1e49b65b8d73af98c81
+      internalID: 863888331
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HockeyTeamNHL_30
+      rect:
+        serializedVersion: 2
+        x: 390
+        y: 50
+        width: 195
+        height: 190
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 78375e3cedd8d404e89ed5a3eaa758d0
+      internalID: 1780528557
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HockeyTeamNHL_31
+      rect:
+        serializedVersion: 2
+        x: 585
+        y: 50
+        width: 195
+        height: 190
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d45753ff53c2e8c489c56372026fac99
+      internalID: 1938055300
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HockeyTeamNHL_32
+      rect:
+        serializedVersion: 2
+        x: 780
+        y: 50
+        width: 195
+        height: 190
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 37d936d5b9008e2479b9c647d9d82ab4
+      internalID: 2091804498
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HockeyTeamNHL_33
+      rect:
+        serializedVersion: 2
+        x: 975
+        y: 50
+        width: 195
+        height: 190
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce1b872445958404f95862f4a683d5ef
+      internalID: 141595073
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HockeyTeamNHL_34
+      rect:
+        serializedVersion: 2
+        x: 1170
+        y: 50
+        width: 195
+        height: 190
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 79ec2c6e8123fc84bb81a2ac62803908
+      internalID: 953843610
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      HockeyTeamNHL_0: -34295156
+      HockeyTeamNHL_1: 689958013
+      HockeyTeamNHL_10: -2099431998
+      HockeyTeamNHL_11: 650549516
+      HockeyTeamNHL_12: -519691179
+      HockeyTeamNHL_13: -972882685
+      HockeyTeamNHL_14: -281776959
+      HockeyTeamNHL_15: 946291439
+      HockeyTeamNHL_16: -1763748456
+      HockeyTeamNHL_17: -1851027934
+      HockeyTeamNHL_18: 814609503
+      HockeyTeamNHL_19: -1681590300
+      HockeyTeamNHL_2: -127662906
+      HockeyTeamNHL_20: 1821606988
+      HockeyTeamNHL_21: -1628877688
+      HockeyTeamNHL_22: 2132657874
+      HockeyTeamNHL_23: -337972330
+      HockeyTeamNHL_24: 2075660166
+      HockeyTeamNHL_25: -2061028073
+      HockeyTeamNHL_26: -785961164
+      HockeyTeamNHL_27: -1737209823
+      HockeyTeamNHL_28: 33411402
+      HockeyTeamNHL_29: 863888331
+      HockeyTeamNHL_3: 1079138535
+      HockeyTeamNHL_30: 1780528557
+      HockeyTeamNHL_31: 1938055300
+      HockeyTeamNHL_32: 2091804498
+      HockeyTeamNHL_33: 141595073
+      HockeyTeamNHL_34: 953843610
+      HockeyTeamNHL_4: -1158719078
+      HockeyTeamNHL_5: -655033275
+      HockeyTeamNHL_6: -726321015
+      HockeyTeamNHL_7: -1930261856
+      HockeyTeamNHL_8: -274826620
+      HockeyTeamNHL_9: 108914675
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -10,7 +10,7 @@ public class Pick : MonoBehaviour
 
     public delegate void TeamGoal(int team);// 0 = home, 1=away
 
-    public event TeamGoal? Goal;
+    public event TeamGoal Goal;
 
     public static Pick Instance { get; private set; }
 
@@ -38,10 +38,18 @@ public class Pick : MonoBehaviour
         {
             Debug.Log("Goal");
             Goal?.Invoke((collision.name == "gateScoreRight" ? 1 : 0));
-            transform.position = new Vector3(-5, 0, -1);
-            rigidbody.velocity = Vector3.zero;
+            Reset();
         }
     }
 
+
+    public void Reset()
+    {
+        transform.position = new Vector3(-5, 0, -1);
+        rigidbody.velocity = Vector3.zero;
+        if (father != null)
+            father.pick = null;
+        father = null;
+    }
 
 }
