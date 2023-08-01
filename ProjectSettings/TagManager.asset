@@ -6,12 +6,11 @@ TagManager:
   tags:
   - Pick
   - Board
-  - Score
-  - AI
-  - ButtonStart
   - UIInGame
-  - HomePlayers
+  - Score
+  - ButtonStart
   - AwayPlayers
+  - HomePlayers
   layers:
   - Default
   - TransparentFX
@@ -48,4 +47,7 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: UI
+    uniqueID: 1305136593
     locked: 0
